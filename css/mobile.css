@@ -1,0 +1,141 @@
+body {
+	width: 100%;
+}
+body > header,
+main {
+	margin: 0;
+	padding: 0;
+}
+
+main > * {
+	padding: 10px;
+}
+
+.container-middle {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+nav {
+	flex-direction: column;
+	padding: 0;
+}
+nav > a,
+nav img {
+	width: auto;
+	margin: auto;
+}
+
+nav ul {
+	width: 100%;
+}
+nav li {
+	width: 50%;
+	float: none;
+}
+
+nav li a {
+	margin: auto;
+	display: block;
+	border-bottom: 3px solid #f2f2f2;
+	line-height: 45px;
+}
+
+nav li a:hover,
+nav li a:active {
+	color: #0065fc;
+	border: none;
+	border-bottom: 3px solid #0065fc;
+}
+
+form .research-bar {
+	width: 100%;
+}
+
+form .research-bar input[type="text"] {
+	width: 100%;
+}
+
+form .research-bar button span {
+	display: none;
+}
+
+form .research-bar button {
+	margin: 0;
+	padding: 0;
+	border-radius: 15px;
+	width: 60px;
+	/* Center icon*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+form .research-bar button .fa-search {
+	display: inline;
+	line-height: 25px;
+}
+
+#populaires {
+	border-radius: 0;
+	grid-template: auto repeat(3, 175px) / 1fr;
+}
+#populaires > a:nth-child(4) {
+	grid-row: auto / auto;
+	grid-column: auto / auto;
+}
+
+#populaires > a:nth-child(4) > figure {
+	height: 100%;
+	width: 100%;
+	flex-direction: row;
+}
+
+#populaires > a:nth-child(4) figcaption {
+	width: 67%;
+}
+
+#populaires > a:nth-child(4) img {
+	height: 100%;
+	width: 33%;
+}
+
+#hebergements {
+	background-color: transparent;
+	grid-template: auto repeat(6, 250px) auto / 1fr;
+}
+
+/* Hebergement */
+
+#activites {
+	height: 1400px;
+	padding: 10px;
+	grid-template: auto repeat(6, 1fr) / 1fr;
+	grid-template-areas:
+		"act-title"
+		"act-1"
+		"act-2"
+		"act-3"
+		"act-4"
+		"act-5"
+		"act-6";
+}
+
+footer {
+	text-align: left;
+	flex-wrap: wrap;
+}
+
+footer > div {
+	width: 100%;
+	height: auto;
+}
+
+@media only screen and (min-width: 500px) {
+	#hebergements {
+		grid-template: auto repeat(6, 300px) auto / 1fr;
+	}
+	#activites {
+		height: 2000px;
+	}
+}

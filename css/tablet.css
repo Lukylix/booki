@@ -1,0 +1,78 @@
+body > header,
+main {
+	padding: 0 20px;
+}
+
+form {
+	margin-top: 15px;
+}
+
+form > button {
+	margin: 5px 0;
+}
+form > .d-inline {
+	display: block;
+}
+
+main {
+	grid-template: auto auto auto auto / auto;
+}
+
+#hebergements {
+	order: 1;
+	grid-template: auto repeat(3, 250px) auto / 1fr 1fr;
+	padding: 20px;
+	gap: 15px;
+}
+
+#hebergements figure img {
+	height: calc(100% - 100px);
+}
+
+#hebergements figcaption {
+	height: 100px;
+}
+
+#populaires {
+	width: 100%;
+	grid-template: auto repeat(2, 175px) / 1fr 1fr;
+	padding: 20px;
+	gap: 15px;
+	order: 0;
+}
+
+#populaires > a:nth-child(4) {
+	grid-row: 2 / 4;
+	grid-column: 2 / 3;
+}
+
+#populaires > a:nth-child(4) > figure {
+	height: 100%;
+	width: 100%;
+	flex-direction: column;
+}
+#populaires > a:nth-child(4) figcaption {
+	width: 100%;
+}
+
+#populaires > a:nth-child(4) img {
+	height: 50%;
+	width: 100%;
+}
+
+#activites {
+	order: 2;
+	height: 1400px;
+	grid-template: auto 4fr 2fr 4fr 4fr 2fr 4fr / repeat(2, 1fr);
+	grid-template-areas:
+		"act-title act-title"
+		"act-1 act-2"
+		"act-1 act-2"
+		"act-1 act-3"
+		"act-4  act-5"
+		"act-4  act-5"
+		"act-4  act-6";
+	padding: 0;
+	margin-top: 0;
+	gap: 25px;
+}
